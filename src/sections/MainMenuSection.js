@@ -6,14 +6,12 @@ const MainMenuSection = () => {
   return (
 
     <nav className="mainmenu container">
-        <div className="logo">
-            Fixxo.
-        </div>
+        <NavLink className="logo" to="/" end>Fixxo.</NavLink>
         <div className="menu-links">
-            <NavLink className="menu-link" to="/">Home</NavLink>
-            <NavLink className="menu-link" to="/Categories">Categories</NavLink>
-            <NavLink className="menu-link" to="/Products">Products</NavLink>
-            <NavLink className="menu-link" to="/Contacts">Contacts</NavLink>
+            <NavLink className="menu-link" to="/" end>Home</NavLink>
+            <NavLink className="menu-link" to="/Categories" end>Categories</NavLink>
+            <NavLink className="menu-link" to="/Products" end>Products</NavLink>
+            <NavLink className="menu-link" to="/Contacts" end>Contacts</NavLink>
         </div>
         <div className="menu-icons">
             <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />

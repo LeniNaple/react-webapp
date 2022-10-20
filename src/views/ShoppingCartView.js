@@ -1,13 +1,14 @@
 import React from 'react'
 import MainMenuSection from '../sections/MainMenuSection'
 
-const HomeView = () => {
+const ShoppingCartView = () => {
   return (
     <>
       <MainMenuSection />  
-      <h1 className='d-flex justify-content-center'>Home</h1>
+      <h1 className='d-flex justify-content-center'>Shopping Cart</h1>
     </>
   )
 }
 
-export default HomeView
+export default ShoppingCartView
+

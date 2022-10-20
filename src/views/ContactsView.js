@@ -5,7 +5,7 @@ const ContactsView = () => {
   return (
     <>
       <MainMenuSection />  
-      <h1>Contacts</h1>
+      <h1 className='d-flex justify-content-center'>Contacts</h1>
     </>
   )
 }

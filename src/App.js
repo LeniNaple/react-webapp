@@ -5,6 +5,7 @@ import '../src/assets/css/views/style.css';
 import HomeView from './views/HomeView.js';
 import ContactsView from './views/ContactsView.js';
 import NotFoundView from './views/NotFoundView.js';
+import ShoppingCartView from './views/ShoppingCartView';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomeView />} />
           <Route path="*" element={<NotFoundView />} />
           <Route path="/contacts" element={<ContactsView />} />
+          <Route path="/shoppingcart" element={<ShoppingCartView />} />
         </Routes>
 
     </BrowserRouter>
