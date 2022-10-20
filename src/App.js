@@ -1,8 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
-import '../src/assets/css/components/components.css';
+import '../src/assets/css/views/style.css';
 import HomeView from './views/HomeView.js';
 import ContactsView from './views/ContactsView.js';
 import NotFoundView from './views/NotFoundView.js';
