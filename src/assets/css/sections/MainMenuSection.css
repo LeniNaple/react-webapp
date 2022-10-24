@@ -1,6 +1,7 @@
 .mainmenu {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "logo menuLinks menuIcons";
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -12,13 +13,18 @@
             color: var(--color-dark);
             transition: 200ms ease-in-out;
             text-decoration: none;
+            grid-area: logo;
         }
             .mainmenu .logo:hover {
                 color: var(--color-theme-red);
             }
         .mainmenu .menu-links {
             font-weight: 500;
+            justify-content: center;
             transition: color 200ms ease-in-out;
+            grid-area: menuLinks;
+            border: 1px solid black;
+            text-align: center;
         }
             .mainmenu .menu-links .menu-link {
                 margin-left: 15px;
@@ -39,6 +45,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;  
+            grid-area: menuIcons;
         }
             .mainmenu .menu-icons .menu-icon {
                 margin-left: 20px;
@@ -70,31 +77,72 @@
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
    
     .mainmenu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
         justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: "logo menuIcons"
+                             "menuLinks menuLinks";
     }
         .mainmenu .logo {
-            font-size: 50px;
-            margin-bottom: 40px;
+            display: flex;
+            justify-content: start;
         }
         .mainmenu .menu-links {
-            width: 100%;
             display: flex;
             justify-content: space-between;
         }
         .mainmenu .menu-icons {
-            margin-top: 30px;
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: end;
         }
             .mainmenu .menu-icons .menu-icon {
                 margin-left: 15px;
                 margin-right: 15px; 
+            }
+}
+
+@media (max-width: 420px) {
+
+    .mainmenu {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        grid-template-areas:"logo"
+                            "menuIcons"
+                            "menuLinks";
+    }
+        .mainmenu .menu-icons {
+            justify-content: center;
+        }
+        .mainmenu .logo {
+            margin-bottom: 0;
+            font-size: 50px;
+            justify-content: center;
+        }
+        .mainmenu .menu-links {
+            align-items: center;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(121px, 1fr));
+            padding-left: 17px;
+            padding-right: 17px;
+/* Preparation for button maybe? */
+            height: 100%;
+            overflow: hidden;
+        }
+            .mainmenu .menu-links .menu-link {
+                /* border: 1px solid black; */
+                text-align: center;
+                margin-top: 10px;   
             }
 }
