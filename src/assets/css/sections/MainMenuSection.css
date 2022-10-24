@@ -70,3 +70,31 @@
 
 
 
+@media (max-width: 800px) {
+   
+    .mainmenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+        .mainmenu .logo {
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+        .mainmenu .menu-links {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .mainmenu .menu-icons {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+            .mainmenu .menu-icons .menu-icon {
+                margin-left: 15px;
+                margin-right: 15px; 
+            }
+}
