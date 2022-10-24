@@ -18,9 +18,7 @@ function App() {
           <Route path="/contacts" element={<ContactsView />} />
           <Route path="/shoppingcart" element={<ShoppingCartView />} />
         </Routes>
-
     </BrowserRouter>
-      
     </>
   );
 }

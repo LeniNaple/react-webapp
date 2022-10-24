@@ -7,10 +7,9 @@ const NotFoundView = () => {
 
     <div>
       <MainMenuSection />
-      <h1 className='d-flex justify-content-center align-items-center'>404 - Page not found</h1>
-      <NavLink className="menu-link d-flex justify-content-center align-items-center" to="/" end>Home</NavLink>
+      <h1 style={ { margin: "20px" }} className='d-flex justify-content-center align-items-center'>404 - Page not found</h1>
+      <NavLink style={ { margin: "20px" }} className="menu-link d-flex justify-content-center align-items-center" to="/" end>Home</NavLink>
     </div>
-    
   )
 }
 

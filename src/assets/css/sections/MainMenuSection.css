@@ -35,7 +35,6 @@
                 color: var(--color-theme-red);
                 text-decoration: none;
             }
-
         .mainmenu .menu-icons {
             display: flex;
             justify-content: flex-end;
@@ -62,6 +61,12 @@
                 }
                 .mainmenu .menu-icons .active {
                     background-color: var(--color-theme-red);
-                    border: solid 3px var(--color-shadow);
                     text-decoration: none;
                 }
+                .mainmenu .menu-icons .active span {
+                    border: 1px solid var(--color-white);
+                }
+
+
+
+

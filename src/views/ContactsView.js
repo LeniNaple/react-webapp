@@ -1,4 +1,5 @@
 import React from 'react'
+import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 
 const ContactsView = () => {
@@ -6,6 +7,7 @@ const ContactsView = () => {
     <>
       <MainMenuSection />  
       <h1 className='d-flex justify-content-center'>Contacts</h1>
+      <FooterSection />
     </>
   )
 }

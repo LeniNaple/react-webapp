@@ -4,7 +4,9 @@
 /* Cores */
 @import "../cores/Variables.css";
 @import "../cores/Base.css";
+@import "../cores/Colours.css";
+
 
 /* Sections */
 @import "../sections/MainMenuSection.css";
-
+@import "../sections/FooterSection.css";
