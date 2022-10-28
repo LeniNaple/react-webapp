@@ -8,7 +8,7 @@ const HomeView = () => {
     <>
       <MainMenuSection />      
       <h1 className='d-flex justify-content-center'>Home</h1>
-      <ProductGridSection />
+      <ProductGridSection title="Featured Products" />
       <FooterSection />
     </>
   )

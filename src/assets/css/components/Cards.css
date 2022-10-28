@@ -15,7 +15,10 @@
         background-color: var(--linear-gradient-light);
         position: relative;
         overflow: hidden;
-        transition: background 200ms ease-in-out;
+        transition: background 200ms ease-in-out; 
+    }
+    .card .card-box img {
+        width: 100%;
     }
     .card:hover .card-box {
         background-color: var(--color-gray-card);

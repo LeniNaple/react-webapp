@@ -1,13 +1,20 @@
 import React from 'react'
 import ProductCard from '../components/ProductCard'
 
-const ProductGridSection = () => {
+const ProductGridSection = ({title}) => {
   return (
 
     <section className='product-grid'>
-        <p>Featured Product</p>
+        <p>{title}</p>
         <div className='container'>
             <div className='grid'>
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
                 <ProductCard />
             </div> 
         </div> 
