@@ -13,7 +13,7 @@
 }
     .btn-theme-dark p {
         margin: 0;
-        font-weight: var(--font-size-16);
+        font-size: var(--font-size-16);
         font-weight: var(--font-weight-semi-bold);   
     } 
         .btn-theme-dark:hover {
@@ -90,7 +90,7 @@
 }
     .btn-theme-red p {
         margin: 0;
-        font-weight: var(--font-size-16);
+        font-size: var(--font-size-20);
         font-weight: var(--font-weight-semi-bold);   
     } 
         .btn-theme-red:hover {
@@ -147,7 +147,7 @@
 }
     .btn-theme-white p {
         margin: 0;
-        font-weight: var(--font-size-16);
+        font-size: var(--font-size-16);
         font-weight: var(--font-weight-semi-bold);   
     } 
         .btn-theme-white:hover {

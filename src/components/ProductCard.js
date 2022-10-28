@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import TempImg from '../assets/images/Card-Image-2.png'
 
-const ProductCard = () => {
+const ProductCard = ({item}) => {
   return (
 
         <div className="card">
@@ -26,8 +26,8 @@ const ProductCard = () => {
             </div>
 
             <div className="card-text">
-                <p>Category</p>
-                <h1>Modern Black Blouse</h1>
+                <p>{item.category}</p>
+                <h1>{item.productName}</h1>
                 <div className="card-stars">
                     <i className="fa-sharp fa-solid fa-star"></i>
                     <i className="fa-sharp fa-solid fa-star"></i>
@@ -35,7 +35,7 @@ const ProductCard = () => {
                     <i className="fa-sharp fa-solid fa-star"></i>
                     <i className="fa-sharp fa-solid fa-star"></i>
                 </div>
-                <h2><span></span> $35.00</h2>
+                <h2><span>{item.oldPrice}</span> {item.price}</h2>
             </div>
         </div> 
 
