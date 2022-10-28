@@ -19,6 +19,8 @@
     }
     .card .card-box img {
         width: 100%;
+/* not sure this really does anything because of the set height... */
+        object-fit: cover;
     }
     .card:hover .card-box {
         background-color: var(--color-gray-card);

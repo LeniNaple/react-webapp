@@ -1,13 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import TempImg from '../assets/images/Card-Image-2.png'
+import ProductGridSection from '../sections/ProductGridSection'
 
 const ProductCard = ({item}) => {
   return (
 
         <div className="card">
             <div className="card-box">
-                <img src={TempImg} alt='nothing here...' />
+                <img src={item.img} alt="No image here..." />
                 <div className="card-interaction">
                     <button className="card-balls"><i className="fa-regular fa-heart"></i></button>
                     <button className="card-balls"><i className="fa-regular fa-code-compare"></i></button>
@@ -29,6 +29,12 @@ const ProductCard = ({item}) => {
                 <p>{item.category}</p>
                 <h1>{item.productName}</h1>
                 <div className="card-stars">
+
+                    {
+
+                        // Add loop system for rating value
+
+                    }
                     <i className="fa-sharp fa-solid fa-star"></i>
                     <i className="fa-sharp fa-solid fa-star"></i>
                     <i className="fa-sharp fa-solid fa-star"></i>
