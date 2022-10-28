@@ -9,12 +9,12 @@ body {
 }
 
 a {
-    color: var(--color-theme-red);
+    color: var(--color-dark);
     text-decoration: none;
 }
     a:hover {
         color: var(--color-theme-red);
-        text-decoration: underline;
+        text-decoration: none;
     }
 
 @media (min-width: 1600px) {
