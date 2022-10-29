@@ -17,7 +17,7 @@ const MainMenuSection = () => {
         <div className={`menu-links ${ !showMenu ? "active-button": "" }`}>
             <NavLink className="menu-link" to="/" end>Home</NavLink>
             <NavLink className="menu-link" to="/Categories" end>Categories</NavLink>
-            <NavLink className="menu-link" to="/Products" end>Products</NavLink>
+            <NavLink className="menu-link" to="/Products">Products</NavLink>
             <NavLink className="menu-link" to="/Contacts" end>Contacts</NavLink>
         </div>
         <div className="menu-icons">

@@ -2,20 +2,32 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import ProductGridSection from '../sections/ProductGridSection'
 
-const ProductCard = ({item}) => {
+const ProductCard = ({product}) => {
+
+    const addToWishList = (e) => {
+        console.log(`${e.target} added to wishlist`)
+    }
+    const addToCompare = (e) => {
+        console.log("Added to wishlist")
+    }
+    const addToShoppingCart = (e) => {
+        console.log("Added to wishlist")
+    }
+
+
   return (
 
         <div className="card">
             <div className="card-box">
-                <img src={item.img} alt="No image here..." />
+                <img src={product.img} alt="No image here..." />
                 <div className="card-interaction">
-                    <button className="card-balls"><i className="fa-regular fa-heart"></i></button>
-                    <button className="card-balls"><i className="fa-regular fa-code-compare"></i></button>
-                    <button className="card-balls"><i className="fa-regular fa-bag-shopping"></i></button>
+                    <button onClick={addToWishList} className="card-balls"><i className="fa-regular fa-heart"></i></button>
+                    <button onClick={addToCompare} className="card-balls"><i className="fa-regular fa-code-compare"></i></button>
+                    <button onClick={addToShoppingCart} className="card-balls"><i className="fa-regular fa-bag-shopping"></i></button>
                 </div>
 
                 <div className="card-quick-view">
-                    <NavLink to="/products" className="btn-theme-red">
+                    <NavLink to={`/products/${product.productName.toLowerCase().replace(/ /gi, "-")}`} className="btn-theme-red">
                         <div className="line-button-l-1"></div>
                         <div className="line-button-l-2"></div>
                         <p>QUICK VIEW</p>
@@ -26,8 +38,8 @@ const ProductCard = ({item}) => {
             </div>
 
             <div className="card-text">
-                <p>{item.category}</p>
-                <h1>{item.productName}</h1>
+                <p>{product.category}</p>
+                <h1>{product.productName}</h1>
                 <div className="card-stars">
 
                     {
@@ -41,7 +53,7 @@ const ProductCard = ({item}) => {
                     <i className="fa-sharp fa-solid fa-star"></i>
                     <i className="fa-sharp fa-solid fa-star"></i>
                 </div>
-                <h2><span>{item.oldPrice}</span> {item.price}</h2>
+                <h2><span>{product.oldPrice}</span> {product.price}</h2>
             </div>
         </div> 
 
