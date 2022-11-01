@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom'
 import MainMenuSection from '../sections/MainMenuSection'
 
 const NotFoundView = () => {
+
+  window.top.document.title = 'Fixxo'
+
   return (
 
     <div>

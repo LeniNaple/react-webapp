@@ -6,6 +6,9 @@ import TempImg from '../assets/images/Card-Image-2.png';
 
 const HomeView = () => {
 
+  window.top.document.title = 'Home / Fixxo'
+
+
   const [FeaturedProducts, setFeaturedProducts] = useState([
     { id: 1, productName: "Modern Black Blouse 2", category: "Fashion", price: "$35.00", oldPrice: "", rating: 5, img: TempImg },
     { id: 2, productName: "Modern Black Blouse", category: "Fashion", price: "$30.00", oldPrice: "$35.00", rating: 5, img: "https://th.bing.com/th/id/R.3e3063b2f301275ec06d53eb7a96bfa8?rik=8NOq4800bFHxEQ&pid=ImgRaw&r=0"},

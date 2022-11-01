@@ -4,6 +4,9 @@ import { NavLink } from 'react-router-dom'
 import FooterSection from '../sections/FooterSection'
 
 const ShoppingCartView = () => {
+
+  window.top.document.title = 'Shopping-Cart / Fixxo'
+
   return (
     <>
       <MainMenuSection />  

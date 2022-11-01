@@ -7,7 +7,9 @@ import MainMenuSection from '../sections/MainMenuSection'
 
 const ProductsDetailsView = () => {
 
-    const params = useParams()
+  window.top.document.title = 'Product / Fixxo'
+
+  const params = useParams()
 
 
 
