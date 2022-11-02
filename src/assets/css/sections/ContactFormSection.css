@@ -46,6 +46,22 @@
                     position: absolute;
                     bottom: -20px;
                 }
+        .contact-form .container .submitted-form {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-shadow);
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px 0 20px 0;
+        }
+            .contact-form .container .submitted-form:last-child p {
+                padding-top: 10px;
+            }
+
+
+
+
 
 
 @media (max-width: 575px) {
