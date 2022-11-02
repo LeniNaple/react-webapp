@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
-import { validate } from '../scripts/validation'
+import { submitData, validate } from '../scripts/validation'
 import { NavLink } from 'react-router-dom'
 
 const ContactFormSection = () => {
-  let currentPage = "Contact Us"
-  window.top.document.title = `${currentPage} || Fixxo` 
-
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [comments, setComments] = useState('')
   const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
+  const [failedSubmit, setFailedSubmit] =useState(false)
 
   const handleChange = (e) => {
     const {id, value} = e.target
@@ -30,26 +28,51 @@ const ContactFormSection = () => {
     setErrors({...errors, [id]: validate(e)})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setFailedSubmit(false)
+    setSubmitted(false)
+
     setErrors(validate(e, {name, email, comments}))
   
     if (errors.name === null && errors.email === null && errors.comments === null) {
-        setSubmitted(true)
+
+      let json = JSON.stringify({ name, email, comments })
+
         setName('')
         setEmail('')
         setComments('')
         setErrors({})
+
+      if(await submitData( 'https://win22-webapi.azurewebsites.net/api/contactform', 'POST', json )) {
+        setSubmitted(true)
+        setFailedSubmit(false)
+      }else {
+        setSubmitted(false)
+        setFailedSubmit(true)
+      }
+
     } else {
         setSubmitted(false)
     }
   }
 
 
+
+
   return (
     <section className="contact-form mt-5">
       <div className="container">
         
+        {
+          failedSubmit ? (
+            <div className="submitted-form" role="alert">
+              <h3>Something went wrong</h3> 
+              <p>Try sending another comment.</p>
+            </div>  ) :(<></>)
+        }
+
+
         {
           submitted ? (
             <div className="submitted-form" role="alert">
@@ -81,10 +104,7 @@ const ContactFormSection = () => {
               </form>    
             </>
           )
-        
         }
-        
-        
         
       </div>
     </section>
