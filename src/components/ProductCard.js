@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import ProductGridSection from '../sections/ProductGridSection'
 
 const ProductCard = ({product}) => {
 
@@ -19,7 +18,7 @@ const ProductCard = ({product}) => {
 
         <div className="card">
             <div className="card-box">
-                <img src={product.img} alt="No image here..." />
+                <img src={product.imageName} alt="No image here..." />
                 <div className="card-interaction">
                     <button onClick={addToWishList} className="card-balls"><i className="fa-regular fa-heart"></i></button>
                     <button onClick={addToCompare} className="card-balls"><i className="fa-regular fa-code-compare"></i></button>
@@ -27,7 +26,7 @@ const ProductCard = ({product}) => {
                 </div>
 
                 <div className="card-quick-view">
-                    <NavLink to={`/products/${product.productName.toLowerCase().replace(/ /gi, "-")}`} className="btn-theme-red">
+                    <NavLink to={`/products/${product.name.toLowerCase().replace(/ /gi, "-")}`} className="btn-theme-red">
                         <div className="line-button-l-1"></div>
                         <div className="line-button-l-2"></div>
                         <p>QUICK VIEW</p>
@@ -39,7 +38,7 @@ const ProductCard = ({product}) => {
 
             <div className="card-text">
                 <p>{product.category}</p>
-                <h1>{product.productName}</h1>
+                <h1>{product.name}</h1>
                 <div className="card-stars">
 
                     {
