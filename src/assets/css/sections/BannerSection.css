@@ -2,7 +2,7 @@
 .banners {
     display: flex;
     gap: 30px;
-    margin-bottom: 60px;
+    margin-top: 65px;
 }
     .banners .banner-img-left {
         flex: 1;

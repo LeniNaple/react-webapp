@@ -5,7 +5,9 @@ import ProductGridSection from '../sections/ProductGridSection'
 import { GridProductsContext, FeaturedProductsContext } from '../contexts/contexts'
 import ContactSection from '../sections/ContactSection'
 import BannerSection from '../sections/BannerSection'
-import FlashSaleSection from '../sections/FlashSaleSection'
+import FlashSaleSectionLeft from '../sections/FlashSaleSectionLeft'
+import FlashSaleSectionRight from '../sections/FlashSaleSectionRight'
+import ShowcaseSection from '../sections/ShowcaseSection'
 
 const HomeView = () => {
   const gridProducts = useContext(GridProductsContext)
@@ -17,10 +19,12 @@ const HomeView = () => {
     <>
       <div className='homeView'>
         <MainMenuSection /> 
+        <ShowcaseSection />
       </div> 
       <ProductGridSection title="Featured Products" items={featuredProducts} />
       <BannerSection />
-      <FlashSaleSection items={gridProducts} />
+      <FlashSaleSectionLeft btnTitle="FLASH SALE" items={gridProducts} />
+      <FlashSaleSectionRight btnTitle="FLASH SALE" items={gridProducts} />
       <ContactSection />
       <FooterSection />
     </>

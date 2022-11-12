@@ -17,6 +17,8 @@
 @import "../sections/ContactFormSection.css";
 @import "../sections/ContactSection.css";
 @import "../sections/BannerSection.css";
+@import "../sections/FlashSaleSection.css";
+@import "../sections/ShowCaseSection.css";
 
 /* Components */
 @import "../components/Cards.css";

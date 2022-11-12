@@ -7,8 +7,8 @@ const BannerSection = () => {
 
     <section className="banners container">
 {/* Maybe add if title === left show banner left... or something */}
-        <BannerLeft />
-        <BannerRight />
+        <BannerLeft btnTitle="SHOP NOW" />
+        <BannerRight btnTitle="FLASH SALE" />
     </section>
   )
 }

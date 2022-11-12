@@ -2,7 +2,7 @@ import React from 'react'
 import bannerImg2 from "../assets/images/banner-right.svg"
 
 
-const Banner = () => {
+const Banner = ({btnTitle}) => {
   return (
     <>
         <div className="banner-img-right">
@@ -13,7 +13,7 @@ const Banner = () => {
                 <a href="#" className="btn-theme-white">
                     <div className="line-button-l-1"></div>
                     <div className="line-button-l-2"></div>
-                    <p>SHOP NOW</p>
+                    <p>{btnTitle}</p>
                     <div className="line-button-r-1"></div>
                     <div className="line-button-r-2"></div>
                 </a>
