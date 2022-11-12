@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import ProductGridSection from './ProductGridSection'
-import { ProductContext } from '../contexts/contexts' 
+import { GridProductsContext } from '../contexts/contexts' 
 
 const FlashSaleSection = () => {
-    const productContext = useContext(ProductContext)
+    const gridProducts = useContext(GridProductsContext)
 
   return (
     <section className="__flash-sale-left container">
@@ -20,7 +20,7 @@ const FlashSaleSection = () => {
         <div className="__two-for-right">
             <div className="__two-for-right-grid">
                 
-                <ProductGridSection items={productContext.gridProducts} />
+                <ProductGridSection items={gridProducts} />
             </div>
         </div>
 

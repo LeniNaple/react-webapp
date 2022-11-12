@@ -6,7 +6,7 @@ import BreadCrumbSection from '../sections/BreadCrumbSection'
 import { ProductContext } from '../contexts/contexts'
 
 const ProductsView = () => {
-  const productContext = useContext(ProductContext)
+  const products = useContext(ProductContext)
 
   window.top.document.title = 'Products / Fixxo'
 
@@ -15,7 +15,7 @@ const ProductsView = () => {
     <>
       <MainMenuSection />  
       <BreadCrumbSection currentPage="Products" />
-      <ProductGridSection title="Products" items={productContext.all} />
+      <ProductGridSection title="Products" items={products} />
       <FooterSection />
     </>
   )

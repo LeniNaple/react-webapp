@@ -8,42 +8,42 @@ import NotFoundView from './views/NotFoundView.js';
 import ShoppingCartView from './views/ShoppingCartView';
 import ProductsView from './views/ProductsView';
 import ProductsDetailsView from './views/ProductsDetailsView';
-import { ProductContext } from './contexts/contexts.js';
+import { ProductContext, GridProductsContext, FeaturedProductsContext } from './contexts/contexts.js';
 
 
 function App() {
-  const [products, setProducts] = useState({
-    all: [],
-    featuredProducts: [],
-    gridProducts: []
-  })
+  const [products, setProducts] = useState([])
+  const [featuredProducts, setFeaturedProducts] = useState([])
+  const [gridProducts, setGridProducts] = useState([])
 
   useEffect(() => {
-    const fetchAllProducts = async () => {
-      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
-      setProducts({...products, all: await result.json()})
+    const fetchAllData = async () => {
+      const result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
+      setProducts(await result.json())
     }
-    fetchAllProducts(); 
+    fetchAllData(); 
     
-    const fetchfeaturedProducts = async () => {
-      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
-      setProducts({...products, featuredProducts: await result.json()})
+    const fetchFeaturedData = async () => {
+      const result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
+      setFeaturedProducts(await result.json())
     }
-    fetchfeaturedProducts(); 
+    fetchFeaturedData(); 
 
-    const fetchgridProducts = async () => {
-      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
-      setProducts({...products, gridProducts: await result.json()})
+    const fetchGridProducts = async () => {
+      const result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setGridProducts(await result.json())
     }
-    fetchgridProducts(); 
+    fetchGridProducts(); 
 
-  }, [setProducts])
+  }, [setProducts, setFeaturedProducts, setGridProducts])
 
 
   return (
     <>
       <BrowserRouter> 
           <ProductContext.Provider value={products}> 
+          <GridProductsContext.Provider value={gridProducts}>
+          <FeaturedProductsContext.Provider value={featuredProducts}>
             <Routes>
               <Route path="/" element={<HomeView />} />
               <Route path="*" element={<NotFoundView />} />
@@ -52,6 +52,8 @@ function App() {
               <Route path="/products" element={<ProductsView />} />
               <Route path="/products/:productName" element={<ProductsDetailsView />} />
             </Routes>
+          </FeaturedProductsContext.Provider>
+          </GridProductsContext.Provider>
           </ProductContext.Provider>
       </BrowserRouter>
     </>
