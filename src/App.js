@@ -14,7 +14,8 @@ import { ProductContext } from './contexts/contexts.js';
 function App() {
   const [products, setProducts] = useState({
     all: [],
-    featuredProducts: []
+    featuredProducts: [],
+    gridProducts: []
   })
 
   useEffect(() => {
@@ -29,6 +30,12 @@ function App() {
       setProducts({...products, featuredProducts: await result.json()})
     }
     fetchfeaturedProducts(); 
+
+    const fetchgridProducts = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setProducts({...products, gridProducts: await result.json()})
+    }
+    fetchgridProducts(); 
 
   }, [setProducts])
 

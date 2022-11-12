@@ -13,7 +13,9 @@ const MainMenuSection = () => {
   return (
 
     <nav className="mainmenu container">
-        <NavLink className="logo" to="/" end>Fixxo.</NavLink>
+        <div className='logo'>
+          <NavLink to="/" end>Fixxo.</NavLink>
+        </div>
         <div className={`menu-links ${ !showMenu ? "active-button": "" }`}>
             <NavLink className="menu-link" to="/" end>Home</NavLink>
             <NavLink className="menu-link" to="/Categories" end>Categories</NavLink>

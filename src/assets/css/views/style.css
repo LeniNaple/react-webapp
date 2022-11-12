@@ -15,6 +15,20 @@
 @import "../sections/BreadCrumbSection.css";
 @import "../sections/MapSection.css";
 @import "../sections/ContactFormSection.css";
+@import "../sections/ContactSection.css";
+@import "../sections/BannerSection.css";
 
 /* Components */
 @import "../components/Cards.css";
+
+
+
+
+
+
+
+
+/* Specific view-attributes */
+.homeView {
+    background: linear-gradient(90deg, var(--linear-gradient-dark) 0%, var(--linear-gradient-light) 100%);
+}

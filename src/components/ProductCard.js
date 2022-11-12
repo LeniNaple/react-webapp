@@ -40,11 +40,8 @@ const ProductCard = ({product}) => {
                 <p>{product.category}</p>
                 <h1>{product.name}</h1>
                 <div className="card-stars">
-
                     {
-
                         // Add loop system for rating value
-
                     }
                     <i className="fa-sharp fa-solid fa-star"></i>
                     <i className="fa-sharp fa-solid fa-star"></i>
