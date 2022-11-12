@@ -1,5 +1,6 @@
 import React from 'react'
 import bannerImg2 from "../assets/images/banner-right.svg"
+import { NavLink } from 'react-router-dom'
 
 
 const Banner = ({btnTitle}) => {
@@ -10,13 +11,13 @@ const Banner = ({btnTitle}) => {
             <div className="banner-text">
                 <h1>Let's Be</h1>
                 <h1>Conscious</h1>
-                <a href="#" className="btn-theme-white">
+                <NavLink to="/products" className="btn-theme-white">
                     <div className="line-button-l-1"></div>
                     <div className="line-button-l-2"></div>
                     <p>{btnTitle}</p>
                     <div className="line-button-r-1"></div>
                     <div className="line-button-r-2"></div>
-                </a>
+                </NavLink>
             </div>
         </div>
     </>

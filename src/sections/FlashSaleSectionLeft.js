@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import ProductGridSection from './ProductGridSection'
 import { GridProductsContext } from '../contexts/contexts' 
+import { NavLink } from 'react-router-dom'
 
 const FlashSaleSectionLeft = ({btnTitle}) => {
     const gridProducts = useContext(GridProductsContext)
@@ -9,13 +10,13 @@ const FlashSaleSectionLeft = ({btnTitle}) => {
     <section className="flash-sale-left container">
         <div className="two-for-left"> 
             <h1>2 FOR USD $29</h1>
-            <a href="#" className="btn-theme-white">
+            <NavLink to="/products" className="btn-theme-white">
                 <div className="line-button-l-1"></div>
                 <div className="line-button-l-2"></div>
                 <p>{btnTitle}</p>
                 <div className="line-button-r-1"></div>
                 <div className="line-button-r-2"></div>
-            </a>
+            </NavLink>
         </div>
         <div className="two-for-right">
             <ProductGridSection items={gridProducts} />
