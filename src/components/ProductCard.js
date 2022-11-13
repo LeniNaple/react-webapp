@@ -14,11 +14,13 @@ const ProductCard = ({product}) => {
     }
 
 
+
   return (
+
 
         <div className="card">
             <div className="card-box">
-                <img src={product.imageName} alt="No image here..." />
+                <img src={product.imageName} alt="Nothing here..." />
                 <div className="card-interaction">
                     <button onClick={addToWishList} className="card-balls"><i className="fa-regular fa-heart"></i></button>
                     <button onClick={addToCompare} className="card-balls"><i className="fa-regular fa-code-compare"></i></button>
@@ -39,10 +41,7 @@ const ProductCard = ({product}) => {
             <div className="card-text">
                 <p>{product.category}</p>
                 <h1>{product.name}</h1>
-                <div className="card-stars">
-                    {
-                        // Add loop system for rating value
-                    }
+                <div className="card-stars" >  
                     <i className="fa-sharp fa-solid fa-star"></i>
                     <i className="fa-sharp fa-solid fa-star"></i>
                     <i className="fa-sharp fa-solid fa-star"></i>

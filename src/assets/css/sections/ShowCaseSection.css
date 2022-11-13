@@ -7,20 +7,17 @@
     .showcase .img-left {
         margin-left: -120px;
         flex: 1;
-        border: solid black 1px;
     }
         
     .showcase .img-right {
         margin-right: -125px;
         flex: 1;
-        border: solid black 1px;
     }
     .showcase .showcase-body {
         display: flex;
         flex-direction: column;
         align-items: center;
         flex: 1;
-        border: solid black 1px;
     }
         .showcase img {
             width: 100%;
